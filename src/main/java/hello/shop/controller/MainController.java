@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class MainController {
 
     @GetMapping("/")
-    public String main(@RequestParam(required = true, defaultValue = "0") int test) {
+    public String main(@RequestParam(required = false, defaultValue = "0") int test) {
         if(test >= 1) {
             log.info("로그 info 확인");
         } else if(test == 0) {
